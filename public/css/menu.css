@@ -1,0 +1,319 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --body-bg: #7f22ea;
+    --bg-purple:#7f22ea;
+    --bg-black:#000;
+    --bg-lightblack: #0e0e0e;
+    --btn-primary: #4629d3;
+    --btn-secondary: #f5f5f5;
+    --btn-primary-hover: #295cd3;
+    --btn-secondary-hover: #eee;
+    --text-blue: #eee;
+    --text-black: #eee;
+    --text-grey: #eee;
+    --text-white: #fff;
+    --bg-color:  linear-gradient(90deg, rgba(127,34,234,1) 46%, rgba(192,34,234,1) 100%);
+    --bg-main-color: #000000;
+    --card-color: #0e0e0e;
+    --text-color: #eeeeee;
+    --warning-color: #a53e33;
+    --title-color: #7f22ea;
+    --button-border: #3c0b75;
+    --submitted-color: #1e6f5c;
+}
+
+body {
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*general styles*/
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  text-decoration: none;
+  color: var(--text-blue);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: var(--text-black);
+}
+
+h3 {
+  color: var(--text-white);
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+h4 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+p {
+  font-family: 'Poppins-Regular', sans-serif;
+  color: var(--text-grey);
+  font-size: 1.5rem;
+}
+
+a {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+i {
+  color: var(--text-white);
+  font-size: 2.5rem;
+}
+
+span {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+button {
+  padding: 1rem;
+  width: 20rem;
+  border: .5rem solid;
+  border-radius: 2.5rem;
+  background-color: var(--title-color);
+  border-color: var(--title-color) ;
+  box-shadow: .4rem .4rem 0 var(--button-border);
+  color: var(--text-color);
+  transition: .5s;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: var(--button-border);
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(.5rem) translateX(.2rem);
+}
+
+/* header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    padding: 0 1rem;
+  }
+  
+  .header__list {
+    margin: 0 1rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--bg-lightblack);
+    border-radius: 2rem;
+    z-index: 1;
+  }
+  
+  .header__item a {
+    display: block;
+    color: var(--text-white);
+    padding: 2rem 4rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+  }
+  
+  .header__item a:hover,
+  .header__btn:hover {
+    background-color: #5a11af;
+  }
+  
+  .header__logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-white);
+  }
+  
+  /* menu */
+  .header__menu {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 6.5rem;
+    right: 0;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 1.6rem, rgb(0 0 0 / 5%) 0 0 0.1rem, rgb(0 0 0 / 5%) 0 0.4rem 0.8rem;
+    border-radius: 0.8rem;
+  }
+  
+  /* menu icon */
+  .header__icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 2.8rem 2rem;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header__icon .navicon {
+    background: var(--text-white);
+    display: block;
+    height: 0.2rem;
+    position: relative;
+    transition: .2s ease-out;
+    width: 1.8rem;
+  }
+  
+  .header__icon .navicon:before,
+  .header__icon .navicon:after {
+    background: var(--text-white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header__icon .navicon:before {
+    top: 0.5rem;
+  }
+  
+  .header__icon .navicon:after {
+    top: -0.5rem;
+  }
+  
+  /* menu btn */
+  .header__btn {
+    display: none;
+  }
+  
+  .header__btn:checked ~ .header__menu {
+    max-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 6.5rem;
+    right: 0;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 1.6rem, rgb(0 0 0 / 5%) 0 0 0.1rem, rgb(0 0 0 / 5%) 0 0.4rem 0.8rem;
+    border-radius: 0.8rem;
+  }
+
+  .header__btn:checked ~ .header__menu .header__list {
+    border: 0.1rem solid var(--bg-purple);
+  }
+  
+  .header__btn:checked ~ .header__icon .navicon {
+    background: transparent;
+  }
+  
+  .header__btn:checked ~ .header__icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header__btn:checked ~ .header__icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+    .header__btn:checked ~ .header__icon:not(.steps) .navicon:before,
+   .header__btn:checked ~ .header__icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /*heading content*/
+  .heading {
+    padding: 3rem;
+}
+    .heading h1 {
+        width: 26rem;
+    }
+
+  /*footer*/
+  .footer {
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+  }
+
+  .footer__text {
+      text-align: center;
+  }
+
+  /*TabletView*/
+@media only screen and (min-width: 45rem) {
+  .header {
+      width: 95%;
+      margin: 4rem auto;
+  }
+  .heading {
+      height: 20rem;
+  }
+  .heading--height {
+      height: 27rem;
+  }
+  .header__btn:checked ~ .header__menu {
+    width: 32rem;
+  }
+}
+
+  @media only screen and (min-width: 64rem) {
+    .header__item {
+      float: left;
+    }
+    .header__item a {
+        padding: 2rem 3rem;
+    }
+    .header__menu {
+        display: inline-block;
+        top: 0;
+        clear: none;
+        float: right;
+        max-height: none;
+        box-shadow: none;;
+    }
+    .header__icon {
+        display: none;
+    }
+      .heading {
+          margin: 12rem 0;
+          height: 12rem;
+      }
+      .heading--height {
+          height: 23rem;
+      }
+
+  }

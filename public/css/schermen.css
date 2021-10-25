@@ -1,0 +1,167 @@
+.flex-container{
+    padding: 3rem;
+    position: relative;
+    height: auto;
+    border-radius: 3rem 3rem 0 0;
+    background-color: var(--bg-black);
+}
+
+.table__afstanden{
+  color: white;
+  width: 80%;
+  margin: auto auto 2rem auto;
+}
+
+.u-grid-table{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.u-grid-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.containerTable{
+    height: 50rem;
+    max-width: 100%;
+    border-radius: 2rem;
+    background-color: #0e0e0e;
+}
+
+.containerGraph{
+    height: 100%;
+    max-width: 100%;
+    border-radius: 2rem;
+    background-color: #0e0e0e;
+}
+
+.schermTable{
+    height: 20rem;
+    max-width: 100%;
+    border-radius: 2rem;
+    background-color: #0e0e0e;
+}
+
+.scherm__option{
+    height: 4rem;
+    width: 90%;
+    margin: 1rem;
+    position: relative;
+}
+
+.schermTable__header{
+    margin: 1.5rem;
+}
+
+.scherm__info{
+    height: 20rem;
+    max-width: 100%;
+    border-radius: 2rem;
+    background-color: #0e0e0e;
+}
+
+.scherm__info__group{
+    margin: 1rem;
+}
+
+.scherm__info__group__text{
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.scherm__table__button{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.container__title{
+    margin: 4rem;
+}
+
+table {
+    width: 100%;
+}
+
+.u-button-font{
+    color: black;
+}
+
+.button__wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30%;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+@media only screen and (max-width: 45rem) {
+    .table__button{
+        width: 80% !important;;
+    }
+    .modal__button{
+        max-width: 50%!important;
+        margin: 0 auto;
+    }
+    .scherm__table__button{
+        max-width: 80%!important;
+    }
+
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    grid-template-columns: 1fr;
+    display: grid;
+    position: relative;
+    height: 70%;
+  }
+
+  .modal__button{
+      width: 100%;
+      height: 30%;
+  }
+
+  .modal__text{
+      color: #0e0e0e;
+  }
+
+  tr{
+      font-size: 1.8rem;
+  }
+
+  table, th, td {
+    border: 0.5rem solid grey;
+  }
+
+  .button__text{
+      color: white;
+  }
+
+
+  

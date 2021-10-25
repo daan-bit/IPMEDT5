@@ -1,0 +1,346 @@
+
+/* -------------------------------------------------------------------------------------- */
+/* Modal */
+.modal {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 110%;
+}
+
+.modal__content {
+  background-color: #0E0E0E;
+  border: 1px solid #888;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal__titel{
+  font-size: 600% !important;
+  text-align: center;
+  margin-top: 4rem;
+  color: white;
+}
+
+.modal__tekstContainer{
+  color: white;
+  width: 100%;
+  margin: 1rem;
+  font-size: 170% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.modal__tekst{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+  font-size: 115% !important;
+}
+
+.modal__inputContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  margin-top: 2rem;
+}
+
+.inputContainer__tekst{
+  margin: auto auto 0 auto;
+  font-size: 160%;
+}
+
+.inputContainer__input{
+  margin: 3rem auto 2rem auto;
+  font-size:140%;
+  padding-left: 0.5rem;
+  width: 10rem;
+}
+
+.modal__buttonContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.modal__button{
+  font-size:180%;
+} 
+
+/* --------------------------------------------------- */
+/* homepagina */
+
+.main__titleWrapper{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 6rem;
+    font-size: 120%;
+}
+
+.main__title{
+  color: #eeeeee;
+  text-align: center; 
+  font-size: 200%;  
+}
+
+.main__cardWrapper{
+  background-color: black;
+  max-width: 120rem;
+  height: 100%;
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+  row-gap: 2rem;
+  column-gap: 2rem;
+  padding: 2rem;
+}
+
+.main__card{
+  width: 100%;
+  height: 100%;
+  background-color: #0E0E0E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 2rem;
+  margin: auto;
+  border-radius:3rem;
+}
+
+.main__button{
+  font-size:180%;
+  padding: 1rem 4rem;
+}
+
+
+.main__tijd{
+  font-size: 400% !important;
+  margin: 1.5rem auto 2rem auto;
+  display: none;
+}
+
+#js--startButton{
+  display: none;
+}
+
+.main__tekst{
+  width: 100%;
+  font-size: 300% !important;
+  text-align: center;
+}
+
+.main__tekst--status{
+  margin-top: 1rem;
+}
+
+.main__ondertekst{
+  text-align: center;
+  margin-top:2rem;
+  font-size:160% !important;
+}
+
+.main__tekst--aanwezig{
+  text-transform: uppercase;
+  font-size: 350%;
+}
+
+.main__buttonContainer{
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.main__button--noodgeval {
+  top: 0;
+  left: 0;
+  transition: all 0.15s linear 0s;
+  position: relative;
+  display: inline-block;
+  padding: 2rem 5rem;
+  background-color: rgba(165, 62, 51, 1);
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-family: arial;
+  letter-spacing: 1px;
+  box-shadow: -6px 6px 0 rgba(165, 62, 51, 0.3);
+  text-decoration: none;
+  border-radius: 4rem;
+  font-size: 180%;
+  margin-top: 4rem;
+}
+
+.main__button--noodgeval:hover {
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 #A53E33;
+}
+.main__button--noodgeval:hover::after {
+  top: 1px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
+}
+.main__button--noodgeval:hover::before {
+  bottom: -2px;
+  right: 1px;
+  width: 4px;
+  height: 4px;
+}
+.main__button--noodgeval::after {
+  transition: all 0.15s linear 0s;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #404040;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.main__button--noodgeval::before {
+  transition: all 0.15s linear 0s;
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #404040;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+a.main__button--noodgeval {
+  position: relative;
+}
+
+a:active.main__button--noodgeval {
+  top: 6px;
+  left: -6px;
+  box-shadow: none;
+}
+a:active.main__button--noodgeval:before {
+  bottom: 1px;
+  right: 1px;
+}
+a:active.main__button--noodgeval:after {
+  top: 1px;
+  left: 1px;
+}
+
+@media(min-width: 37.5rem){
+  .main__cardWrapper{
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  } 
+  .modal{
+    font-size: 140%;
+  }
+}
+
+@media(min-width: 50rem){
+  .main__tekst{
+    font-size: 350% !important;
+  } 
+  .main__tijd{
+    font-size:450% !important;
+  } 
+  .main__button{
+    font-size: 180% !important;
+  }
+}
+
+@media(min-width: 62.5rem){
+  .main__tekst{
+    font-size: 400%;
+  } 
+  .main__tijd{
+    font-size:500%;
+  } 
+  .main__button{
+    font-size: 200%;
+  }
+  .main__ondertekst{
+    font-size:130%;
+  }
+}
+
+/* ------------------------------------------------------------------------------- */
+/* noodgeval pagina */
+.main__cardWrapper--stop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box; 
+  padding: 2rem;
+}
+
+.main__card--stop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: auto;
+  font-size: 140%;
+}
+
+.main__tekst--stop{
+  text-transform: uppercase;
+}
+
+.main__buttonContainer--stop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.main__button--terug{
+  margin-bottom: 1rem;
+}
+
+.main__a{
+  color: #eeeeee;
+  margin-bottom: 3rem;
+}
+
+
+
+@media(min-width:62.5rem){
+  .main__card--stop{
+    font-size: 160%;;
+  }
+}

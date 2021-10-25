@@ -1,0 +1,210 @@
+.templucht{
+    font-family: 'Poppins', sans-serif;
+}
+
+h4{
+    color: var(--text-color);
+}
+
+
+/* Main content */
+.templucht__main{
+    background-color: var(--bg-main-color);
+    height: 100%;
+    border-radius: 2.5rem;
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        'new'
+        'pref'
+        'avg'
+        'lat'
+        'set';
+    grid-gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.templucht__main__article, .templucht__article{
+    width: 100%;
+    background-color: var(--card-color);
+    border-radius: 2.5rem;
+    padding: 2rem;
+}
+
+.templucht__main__article:nth-of-type(1){
+    grid-area: new;
+}
+.templucht__main__article:nth-of-type(2){
+    grid-area: pref;
+}
+.templucht__main__article:nth-of-type(3){
+    grid-area: avg;
+}
+.templucht__main__article:nth-of-type(4){
+    grid-area: lat;
+}
+.templucht__main__article:nth-of-type(5){
+    grid-area: set;
+}
+
+.templucht__main__article_title{
+    font-size: 2rem;
+}
+
+.templucht__recordings{
+    margin: 1rem 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 2.5rem;
+}
+
+
+
+/* Warning notificatie */
+.templucht__notification__title{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.templucht__backdrop{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: black;
+    opacity: 70%;
+}
+
+.templucht__notification{
+    padding: 0;
+    height: 0rem;
+    width: 100%;
+    max-width: 36rem;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    overflow: hidden;
+    background-color: var(--warning-color);
+    transition: 0.75s;
+    z-index: 2;
+}
+
+.templucht__notification__section{
+    width: 90%;
+    margin-left: 2rem;
+}
+
+.templucht__notification__section > h2{
+    font-size: 2.6rem;
+    margin-top: 2rem  ;
+    width: 100%;
+}
+
+
+.templucht__notification__close{
+    display: none;
+    
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: .5rem solid;
+    border-radius: 2.5rem;
+    background-color: var(--title-color);
+    border-color: var(--title-color) ;
+    box-shadow: .4rem .4rem 0 var(--button-border);
+    color: var(--text-color);
+    transition: .5s;
+    font-size: 1.5rem;
+}
+
+
+
+.templucht__notification__section__list{
+    list-style: circle;
+    margin-left: 2rem;
+}
+
+.templucht__notification__section__list > li{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin: .2rem;
+}
+
+
+/* Algemene verstop class */
+.templucht_hide{
+    display: none;
+}
+
+/* Herlaad knop */
+.templucht_refresh{
+    margin-top: 2rem;
+}
+
+/* Voorkeur settings */
+.templucht__main__form > h4{
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.templucht__main__form__label{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.templucht__main__form__input{
+    font-size: 1.6rem;
+    width: 20%;
+    max-width: 9rem;
+    margin-bottom: 1rem;
+    border-radius: 2.5rem;
+    padding: .6rem 1rem;
+}
+
+.templucht__submitted{
+    transition: .5s;
+    overflow: hidden;
+    position: fixed;
+    height: 0rem;
+    z-index: 5;
+    max-width: 60rem;
+    width: 90%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--submitted-color);
+    border-bottom-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+}
+
+.templucht__form__submit{
+    margin-top: 2rem;
+}
+
+.templucht__submitted > p {
+    padding: 2rem 3rem;
+    font-size: 1.7rem;
+}
+
+
+
+/* Verandert grid */
+@media (min-width: 60rem){
+    .templucht__main{
+        grid-template-areas: 
+        'new pref'
+        'new avg'
+        'lat lat'
+        'set set';
+    }
+
+}
+
